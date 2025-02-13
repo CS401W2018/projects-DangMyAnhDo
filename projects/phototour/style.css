@@ -1,0 +1,71 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('background.jpg');
+        background-repeat: repeat-x;
+        color: white;
+    }
+    .vietnam-flag {
+        position: absolute;
+        top: 120px;
+        right: 20px;
+        width: 200px;
+        height: auto;
+    }
+    .text-content {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        width: fit-content;
+    }
+    header {
+        background-color: rgb(154, 28, 28);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        background-color: #333;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a.current {
+        color: #FFD700;
+        font-weight: bold;
+    }
+
+    main {
+        padding: 20px;
+
+    }
+    main ul li a {
+        color: white; 
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    ul li {
+            list-style-image: url('vietnamflag.png');
+    }
