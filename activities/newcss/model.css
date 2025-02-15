@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: burlywood;
+    padding: 30px;
+    margin: 25px;
+    width: 50%;
+    overflow: visible;
+}
+header h1 {
+    border: 5px dotted #000;
+}
