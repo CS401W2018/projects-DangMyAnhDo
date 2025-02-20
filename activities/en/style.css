@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav a {
+    background-color: aqua;
+    display: block;
+    padding: 10px, 5px;
+    border-bottom: 5px, solid #fff;
+
+}
+.map {
+    width: 100px;
+    border: thin solid #000;
+    box-shadow: 10px, 10px, 3px, rgba(0,0,0, 5);
+    font-size: 9pt;
+    float: left;
+}
+.map img {
+    width: 100%
+}
+.class {
+    clear: both;
+
+}
