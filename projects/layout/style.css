@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(51, 92, 100, 0.893);
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header {
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    background-color: #4f94b8;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-image: url('blue.jpg');
+    background-size: cover;
+    background-position: center;
+    background-origin: content-box;
+    background-clip: border-box;
+}
+
+nav {
+    background-color: #008c99;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #008c99;
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+.highlight {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #42adb7;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: white;
+}
+figure {
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+#doraemon {
+    width: 300px;
+    border: 1px solid #000;
+    float: left;
+}
+
+.doraemon img {
+    width: 100%;    
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.end {
+    clear: both;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 15px;
+    color: #008c99;
+}
+
+footer {
+    text-align: center;
+    background-color: #4fa0b8;
+    padding: 15px;
+    color:white;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav {
+        text-align: left;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    .doraemon img {
+        width: 80%;
+    }
+}
