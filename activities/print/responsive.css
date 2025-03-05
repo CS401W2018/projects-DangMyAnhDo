@@ -1,21 +1,28 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
 header {
-    background-color: aliceblue;
-    color: blue;
+    background-color: rgb(20, 117, 201);
+    width: 100%;  
 }
 
 header h1 {
-    margin: 0;
+    background-color: rgb(101, 131, 157);
+    padding: 10px;
+    text-align: center;
 }
 
 nav {
-    background-color: blanchedalmond;
     display: flex;
     justify-content: space-evenly;
+    background-color: rgb(103, 77, 38);
+    width: 100%;
+    padding: 10px;
 }
 
 nav a {
@@ -31,51 +38,76 @@ nav a:hover {
     background-color: brown;
 }
 
+main {
+    width: 80%; 
+    max-width: 1200px; 
+    padding: 20px;
+    text-align: center;
+}
+
 .row {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .card {
-    border: thin solid black;
-    box-shadow: 3px 3px 3px rgba(255, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: thin solid #555;
+    box-shadow: 3px 3px 3px rgba(46, 39, 39, 0.5);
 }
 
 .card figure {
     margin: 0;
+    width: 100%;
 }
 
-.card img {
+.card figure img {
     width: 100%;
     height: auto;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.card h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: rgb(20, 117, 201);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+@media ONLY screen AND (max-width: 900px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     nav {
-        background-color: #222;
         flex-direction: column;
     }
-
     nav a {
         border-bottom: thin solid #fff;
     }
-
-    .container {
-        flex-direction: column;
-    }
-
     .card {
-        margin-bottom: 10px;
-    }
-
-    .middle {
-        order: -1;
+        margin-bottom: 20px;
+        width: 90%;
     }
 }
