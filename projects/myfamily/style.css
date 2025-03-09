@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    background-color: #FF69B4;
+    color: white;
+    width: 100%;
+}
+header h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: underline;
+}
+nav ul li a:hover {
+    color: #FF69B4;
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.sidebar figure {
+    text-align: center;
+}
+
+.sidebar img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+main {
+    width: 70%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: thin solid #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+@media print {
+    header, footer {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, main {
+        width: 100%;
+    }
+
+    article {
+        width: 100%;
+    }
+}
