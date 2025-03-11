@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Department</td>
+                    <td>Number</td>
+                    <td>Time</td>
+                    <td>Location</td>
+                    <td>Credits</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="5">Winter 2025</th>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>140</td>
+                    <td>11:00-11:50 AM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>140</td>
+                    <td>12:00-12:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>210</td>
+                    <td>12:00-12:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>320</td>
+                    <td>3:00-3:50 PM</td>
+                    <td>P3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th colspan="5">Spring 2025</th>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>320</td>
+                    <td>3:00-3:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th id="total-credits" colspan="4">Total Credits</th>
+                    <td header="total-credits">15</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <h2>Question</h2>
+        <p>1. When do you use a table?</p>
+        <p>I use tables when I need to display organized data in rows and columns, like lists, schedules, or comparisons.</p>
+        <p>2. When do you not use a table?</p>
+        <p>I avoid using tables for layout purposes—CSS is a better choice for that—or for simple lists, where a ul or ol would be more appropriate.</p>
+        <p>3. When do you need to do extra work for table accessibility?</p>
+        <p>I use th for headers, add a caption to explain the table, and use the scope attribute to help screen readers. This makes tables easier to use</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dang My Anh Do</p>
+    </footer>
+</body>
+</html>
