@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Web Design</h1>
-    </header>
+    <header><h1>Web Design</h1></header>
     <main>
-        <table border="1">
+        <table class="schedule">
+            <caption>Class schedules</caption>
             <thead>
                 <tr>
-                    <td>Department</td>
-                    <td>Number</td>
-                    <td>Time</td>
-                    <td>Location</td>
-                    <td>Credits</td>
+                    <th scope="col">Department</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Credits</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Winter 2025 Section Header -->
                 <tr>
-                    <th colspan="5">Winter 2025</th>
+                    <th scope="row" colspan="5">Winter 2025</th>
                 </tr>
                 <tr>
                     <td>CS</td>
@@ -53,8 +53,9 @@
                     <td>P3</td>
                     <td>3</td>
                 </tr>
+                <!-- Spring 2025 Section Header -->
                 <tr>
-                    <th colspan="5">Spring 2025</th>
+                    <th scope="row" colspan="5">Spring 2025</th>
                 </tr>
                 <tr>
                     <td>CS</td>
@@ -65,20 +66,19 @@
                 </tr>
             </tbody>
             <tfoot>
+                <!-- Total Credits Footer Header -->
                 <tr>
-                    <th id="total-credits" colspan="4">Total Credits</th>
-                    <td header="total-credits">15</td>
+                    <th colspan="4" id="total-credits" scope="row">Total Credits</th>
+                    <td>15</td>
                 </tr>
             </tfoot>
         </table>
         <hr>
         <h2>Question</h2>
-        <p>1. When do you use a table?</p>
-        <p>I use tables when I need to display organized data in rows and columns, like lists, schedules, or comparisons.</p>
-        <p>2. When do you not use a table?</p>
-        <p>I avoid using tables for layout purposes—CSS is a better choice for that—or for simple lists, where a ul or ol would be more appropriate.</p>
-        <p>3. When do you need to do extra work for table accessibility?</p>
-        <p>I use th for headers, add a caption to explain the table, and use the scope attribute to help screen readers. This makes tables easier to use</p>
+        <p>1. Why don't we use the border attribute?</p>
+        <p>The border attribute is old and doesn't offer much control. It's better to use CSS because it gives us more options and is easier to work with.</p>
+        <p>2. What is the easiest way to color every other row a different color?</p>
+        <p>To color every other row differently, we can use CSS. Just apply a different color to even and odd rows using nth-child. For example, make even rows light gray and odd rows white.</p>
     </main>
     <footer>
         <p>&copy; 2025 Dang My Anh Do</p>
