@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Web Design</h1></header>
+    <main>
+        <table class="schedule">
+            <caption>Class schedules</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Department</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Winter 2025 Section Header -->
+                <tr>
+                    <th scope="row" colspan="5">Winter 2025</th>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>140</td>
+                    <td>11:00-11:50 AM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>140</td>
+                    <td>12:00-12:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>210</td>
+                    <td>12:00-12:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>320</td>
+                    <td>3:00-3:50 PM</td>
+                    <td>P3</td>
+                    <td>3</td>
+                </tr>
+                <!-- Spring 2025 Section Header -->
+                <tr>
+                    <th scope="row" colspan="5">Spring 2025</th>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>320</td>
+                    <td>3:00-3:50 PM</td>
+                    <td>P2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- Total Credits Footer Header -->
+                <tr>
+                    <th colspan="4" id="total-credits" scope="row">Total Credits</th>
+                    <td>15</td>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <h2>Question</h2>
+        <p>1. Why don't we use the border attribute?</p>
+        <p>The border attribute is old and doesn't offer much control. It's better to use CSS because it gives us more options and is easier to work with.</p>
+        <p>2. What is the easiest way to color every other row a different color?</p>
+        <p>To color every other row differently, we can use CSS. Just apply a different color to even and odd rows using nth-child. For example, make even rows light gray and odd rows white.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dang My Anh Do</p>
+    </footer>
+</body>
+</html>
