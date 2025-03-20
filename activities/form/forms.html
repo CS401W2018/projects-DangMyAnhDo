@@ -10,48 +10,57 @@
     <header><h1>Wed Deisgn</h1></header>
     <main>
         <form action="processing.html" method="get">
-            <div class="form-row">
-                <label for="fullname">Full Name:</label>
-                <input type="text" name="fullname" placeholder="Full Name" id="fullname">
-            </div>
-            <div class="form-row">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+            <fieldset>
+                <legend>Account Infor</legend>
+                <div class="form-row">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" name="fullname" placeholder="Full Name" id="fullname">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
 
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="pass">
-            </div>
-            <div>
-                <label for="state">State:</label>
-                <select name="state" id="state">
-                    <option value="blank"></option>
-                    <option value="CO">Colorando</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="UT">Utah</option>
-                    <option value="CA">California</option>
-                    <option value="WA">Washington</option>
-                </select>
-            </div>
-            <div>
-                <label for="year">Year in School</label>
-                <label><input type="radio" name="year" value="Freshman"> Freshman</label>
-                <label><input type="radio" name="year" value="Sophomore"> Sophomore</label>
-            </div>
-            <div class="form-row"></div>
-                <input type="submit">
-            </div>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="pass">
+                </div>
+                <div class="form-row">
+                    <label for="state">State:</label>
+                    <select name="state" id="state">
+                        <option value="blank"></option>
+                        <option value="CO">Colorando</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="UT">Utah</option>
+                        <option value="CA">California</option>
+                        <option value="WA">Washington</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="year">Year in School</label>
+                    <label><input type="radio" name="year" value="Freshman"> Freshman</label>
+                    <label><input type="radio" name="year" value="Sophomore"> Sophomore</label>
+                </div>
+                <div class="form-row">
+                    <label><input type="checkbox" name="agree" id="agree" checked> Remember Me</label>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments"></textarea>
+
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
         </form>
     </main>
     <hr>
     <h2>Questions:</h2>
-    <p>1. The form tag has an "action" attribute. What does it do?</p>
-    <p>The "action" attribute tells where to send the form data</p>
-    <p>2. The form tag has a "method" attribute. What does it do?</p>
-    <p>The "method" attribute tells how: "GET" adds data to the URL, and "POST" sends it secretly.</p>
-    <p>3. What is the difference between a "POST" and a "GET"?</p>
-    <p>"GET" shows data in the URL, while "POST" keeps it hidden.</p>
+    <p>1. What are different ways to style your form?</p>
+    <p>I styled my form by changing colors, sizes, and borders with CSS. I used grid and flexbox to organize the layout. I made it work on all devices with responsive design and used Bootstrap for faster styling. I also customized checkboxes and added animations.</p>
+    <p>2. Why does the professor like to use flex?</p>
+    <p>I noticed the professor likes Flexbox because it’s easy to arrange items, it works well on all screen sizes, and it needs less code. It’s simple to use, works on all browsers, and is easy to update.</p>
     <footer>
         <p>&copy; 2025 Dang My Anh Do</p>
     </footer>
