@@ -9,7 +9,7 @@
 <body>
     <header><h1>Wed Deisgn</h1></header>
     <main>
-        <form action="processing.html" method="get">
+        <form action="processing.html" method="get" id="myform">
             <fieldset>
                 <legend>Account Infor</legend>
                 <div class="form-row">
@@ -24,6 +24,10 @@
                 <div class="form-row">
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="pass">
+                </div>
+                <div class="form-row">
+                    <label for="Age">Age:</label>
+                    <input type="number" name="Age" id="age">
                 </div>
                 <div class="form-row">
                     <label for="state">State:</label>
@@ -56,13 +60,51 @@
         </form>
     </main>
     <hr>
-    <h2>Questions:</h2>
-    <p>1. What are different ways to style your form?</p>
-    <p>I styled my form by changing colors, sizes, and borders with CSS. I used grid and flexbox to organize the layout. I made it work on all devices with responsive design and used Bootstrap for faster styling. I also customized checkboxes and added animations.</p>
-    <p>2. Why does the professor like to use flex?</p>
-    <p>I noticed the professor likes Flexbox because it’s easy to arrange items, it works well on all screen sizes, and it needs less code. It’s simple to use, works on all browsers, and is easy to update.</p>
+    <h2>Question:</h2>
+    <p>1. What is JavaScript? How did it get its name?</p>
+    <p>Website code that makes things interactive. It was named JavaScript to capitalize on the popularity of Java, even though they are distinct programming languages.</p>
+    <p>2. What are the two ways you can run JavaScript?</p>
+    <p>In a web browser, or on a server.</p>
+    <p>3. What was the most popular front-end js library?</p>
+    <p>jQuery</p>
+    <p>4. What is the most popular front-end js library today?</p>
+    <p>React (also Vue and Angular).</p>
     <footer>
         <p>&copy; 2025 Dang My Anh Do</p>
     </footer>
+    <script>
+        document.getElementById('myform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form Submitted");
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+            const Age = document.getElementById('age').value;
+
+            // Check if the fullname field is empty
+            if (!fullname) {
+                alert("You need to enter your name.");
+                return;
+            }
+
+            // Check if Age is entered and greater than or equal to 18
+            if (!Age || Age < 18) {
+                alert("You need to be 18 or older.");
+                return;
+            }
+
+            const formData = {
+                fullname: fullname,
+                email: email,
+                password: pass,
+                age: Age
+            };
+
+            console.log(formData);
+        });
+
+    </script>
+
 </body>
 </html>
