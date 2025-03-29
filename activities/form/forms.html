@@ -61,50 +61,14 @@
     </main>
     <hr>
     <h2>Question:</h2>
-    <p>1. What is JavaScript? How did it get its name?</p>
-    <p>Website code that makes things interactive. It was named JavaScript to capitalize on the popularity of Java, even though they are distinct programming languages.</p>
-    <p>2. What are the two ways you can run JavaScript?</p>
-    <p>In a web browser, or on a server.</p>
-    <p>3. What was the most popular front-end js library?</p>
-    <p>jQuery</p>
-    <p>4. What is the most popular front-end js library today?</p>
-    <p>React (also Vue and Angular).</p>
+    <p>1. What is AJAX?</p>
+    <p>AJAX lets websites get new info without reloading the page.</p>
+    <p>2. Why do you put your JS Code in a separate file?</p>
+    <p>I did put JS in a separate file because it keeps things tidy, lets me use it on multiple pages, loads faster, and is easy to update.</p>
     <footer>
         <p>&copy; 2025 Dang My Anh Do</p>
     </footer>
-    <script>
-        document.getElementById('myform').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert("Form Submitted");
-
-            const fullname = document.getElementById('fullname').value;
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('pass').value;
-            const Age = document.getElementById('age').value;
-
-            // Check if the fullname field is empty
-            if (!fullname) {
-                alert("You need to enter your name.");
-                return;
-            }
-
-            // Check if Age is entered and greater than or equal to 18
-            if (!Age || Age < 18) {
-                alert("You need to be 18 or older.");
-                return;
-            }
-
-            const formData = {
-                fullname: fullname,
-                email: email,
-                password: pass,
-                age: Age
-            };
-
-            console.log(formData);
-        });
-
-    </script>
+    <script src="forms.js"></script>
 
 </body>
 </html>
