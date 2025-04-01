@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="fullName">Full Name*</label>
+            <input type="text" id="fullName" name="fullName">
+            <div id="fullNameError" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email">
+            <div id="emailError" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age">
+            <div id="ageError" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country*</label>
+            <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="UK">United Kingdom</option>
+            </select>
+            <div id="countryError" class="error"></div>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="success-message"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
