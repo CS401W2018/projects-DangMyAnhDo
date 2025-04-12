@@ -3,27 +3,55 @@ document.addEventListener('DOMContentLoaded', function() {
     const thankYouMessage = document.getElementById('thankYouMessage');
     const newSubmissionBtn = document.getElementById('newSubmission');
 
-    form.addEventListener('submit', function(e) {
+    // Only proceed if elements exist
+    if (!form || !thankYouMessage || !newSubmissionBtn) return;
+
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // In a real application, you would send the form data to a server here
-        // For this project, we'll just simulate a successful submission
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
         
-        // Hide the form and show the thank you message
-        form.classList.add('hidden');
-        thankYouMessage.classList.remove('hidden');
-        
-        // Scroll to the thank you message
-        thankYouMessage.scrollIntoView({ behavior: 'smooth' });
+        try {
+            // Simulate server submission delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            // Hide form and show thank you message
+            form.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
+            thankYouMessage.scrollIntoView({ behavior: 'smooth' });
+            
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('There was an error submitting your form. Please try again.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
     });
 
     newSubmissionBtn.addEventListener('click', function() {
-        // Reset the form and show it again
         form.reset();
         form.classList.remove('hidden');
         thankYouMessage.classList.add('hidden');
-        
-        // Scroll back to the form
         form.scrollIntoView({ behavior: 'smooth' });
+        
+        // Focus on first form field for better UX
+        const firstField = form.querySelector('input, select, textarea');
+        if (firstField) firstField.focus();
+    });
+
+    // Enhanced validation feedback
+    form.addEventListener('input', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+            if (e.target.validity.valid) {
+                e.target.classList.remove('invalid');
+            } else {
+                e.target.classList.add('invalid');
+            }
+        }
     });
 });
